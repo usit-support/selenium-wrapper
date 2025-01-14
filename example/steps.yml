@@ -1,0 +1,42 @@
+variaveis:
+  # Amazon.com
+  home: "Home"
+  base_url: "https://www.amazon.com/"
+  
+  # Menu
+  nav-hamburger-menu: "//a[@id='nav-hamburger-menu']"
+
+  # Application
+  app_name: "Amazon Store"
+  app_id: "1"
+  
+  # Page
+
+  # Buttons
+  nav-search-submit-button: "//a[@id='nav-search-submit-button']"
+
+  # Input
+  search: "//*[@id='twotabsearchtextbox']"
+
+setup:
+  steps_delay_in_seconds: 10
+
+steps:
+  # Primeiro passo simples, abrir o menu lateral;
+  - step: 1
+    step_type: "click"
+    element_xpath: ${variaveis.nav-hamburger-menu}
+    enable: True
+
+  # Segundo passo, informar valor no campo de pesquisa;
+  - step: 2
+    step_type: "send_keys"
+    element_xpath: ${variaveis.search}
+    value: "Smartphone"
+    enable: True
+
+  # Terceiro passo, clicar no botão de pesquisa;
+  - step: 3
+    step_type: "click"
+    element_xpath: ${variaveis.nav-search-submit-button}
+    enable: True

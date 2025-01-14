@@ -1,0 +1,16 @@
+# Windows
+#EXECUTABLE_PATH: "C:\\Users\\<user>\\Downloads\\chromedriver\\chromedriver.exe"
+#BINARY_LOCATION: "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+
+# Mac
+EXECUTABLE_PATH: "/Users/romuloigor/chromedriver-mac-arm64/chromedriver"
+BINARY_LOCATION: "/Application/Google Chrome"
+
+LIST_ARGUMENT: [
+  '--ignore-certificate-errors', # Ignora erros de certificado SSL.
+  '--disable-web-security',      # Desativa verificações de segurança adicionais.
+  #'--headless',                  # Executa o Chrome em modo headless (Sem abrir o browser)
+  '--disable-gpu',               # Necessário para compatibilidade no headless mode
+  '--no-sandbox',                # Evita problemas em ambientes restritos
+  '--allow-insecure-localhost',  # É opcional e útil apenas para endereços localhost
+]
