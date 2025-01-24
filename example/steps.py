@@ -20,7 +20,7 @@ class TestSteps:
     def _load_steps(self, file_steps: str) -> dict:
         """Load and process steps from YAML file."""
         if not os.path.exists(file_steps):
-            raise FileNotFoundError(f"Steps file not found: {file_steps}")
+            raise FileNotFoundError(f"Arquivo de passos não encontrado: {file_steps}")
 
         with open(file_steps, "r") as file:
             content = file.read()
