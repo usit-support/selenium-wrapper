@@ -25,7 +25,7 @@ class ChromeBrowser:
             with open(config_path, 'r') as chrome_file:
                 return yaml.safe_load(chrome_file)
         except FileNotFoundError:
-            raise FileNotFoundError(f"Configuration file not found: {config_path}")
+            raise FileNotFoundError(f"Arquivo de configuração não encontrado: {config_path}")
 
     def _initialize_driver(self) -> webdriver.Chrome:
         """Initialize Chrome driver with configuration."""
